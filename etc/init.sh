@@ -1,4 +1,4 @@
-sudo rm /etc/nginx/sitex-enabled/default
+sudo rm /etc/nginx/sites-enabled/default
 sudo ln -sf /home/box/web/etc/nginx.conf /etc/nginx/sites-enabled/default
 echo  Configuration done
 sudo /etc/init.d/nginx restart
