@@ -6,4 +6,3 @@ sudo ln -sf /home/box/web/etc/gunicorn.conf /etc/gunicorn.d/test_wsgi
 sudo ln -sf /home/box/web/etc/gunicorn-django.conf /etc/gunicorn.d/test_django
 echo "Unicorn done"
 sudo /etc/init.d/gunicorn restart
-gunicorn --bind=0.0.0.0:8000 ask.wsgi:application
