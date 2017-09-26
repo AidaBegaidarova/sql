@@ -2,6 +2,16 @@ from django.db import models
 from django.contrib.auth.models import User
 
 # Create your models here.
+
+
+class QuestionManager(models.Manager):
+    def new(self):
+        return self.order_by('-added_at')
+
+    def popular(self):
+        return self.order_by('-rating')
+
+
 class Question(models.Model):
     object = QuestionManager()
     tittle = models.CharField(max_length=255)
@@ -25,9 +35,3 @@ class Answer(models.Model):
     author = models.ForeignKey(User, null=False, on_delete=models.CASCADE)
 
 
-class QuestionManager(models.Manager):
-    def new(self):
-        return self.order_by('-added_at')
-
-    def popular(self):
-        return self.order_by('-rating')
