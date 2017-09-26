@@ -14,7 +14,7 @@ class QuestionManager(models.Manager):
 
 class Question(models.Model):
     object = QuestionManager()
-    tittle = models.CharField(max_length=255)
+    title = models.CharField(max_length=255)
     text = models.TextField()
     added_at = models.DateTimeField(auto_now_add=True)
     rating = models.IntegerField(default=0)
