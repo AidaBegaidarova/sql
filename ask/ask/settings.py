@@ -78,11 +78,11 @@ DB_PASSWORD = ''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ask',
-        'USER': DB_USER,
-        'PASSWORD': DB_PASSWORD,
+        'NAME': 'web',
+        'USER': 'box',
+        'PASSWORD': '1234',
         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
+        'PORT': '',
     }
 }
 
